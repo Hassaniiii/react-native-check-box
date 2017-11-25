@@ -101,6 +101,10 @@ export default class CheckBox extends Component {
         );
     }
 
+    _renderSeperator() {
+      return (this.props.seperator)
+    }
+
     render() {
         return (
             <TouchableHighlight
@@ -113,6 +117,7 @@ export default class CheckBox extends Component {
                     {this._renderLeft()}
                     {this._renderImage()}
                     {this._renderRight()}
+                    {this._renderSeperator()}
                 </View>
             </TouchableHighlight>
         );
