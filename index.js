@@ -40,7 +40,9 @@ export default class CheckBox extends Component {
         isChecked: PropTypes.bool.isRequired,
         isIndeterminate: PropTypes.bool.isRequired,
         checkBoxColor: PropTypes.string,
+        seperator: PropTypes.element,
         disabled: PropTypes.bool,
+        reachedBoundery: PropTypes.bool,
     }
     static defaultProps = {
         isChecked: false,
@@ -49,6 +51,7 @@ export default class CheckBox extends Component {
         rightTextStyle: {}
     }
     onClick() {
+        if (this.props.reachedBoundery) return
         this.setState({
             isChecked: !this.state.isChecked
         })
