@@ -51,7 +51,11 @@ export default class CheckBox extends Component {
         rightTextStyle: {}
     }
     onClick() {
-        if (this.props.reachedBoundery) return
+        if (this.props.reachedBoundery) {
+          if (this.state.isChecked == false) {
+            return
+          }
+        }
         this.setState({
             isChecked: !this.state.isChecked
         })
