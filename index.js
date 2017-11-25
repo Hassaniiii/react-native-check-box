@@ -14,7 +14,7 @@ import {
     ViewPropTypes,
     Image,
     Text,
-    TouchableHighlight
+    TouchableWithoutFeedback
 } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -107,7 +107,7 @@ export default class CheckBox extends Component {
 
     render() {
         return (
-            <TouchableHighlight
+            <TouchableWithoutFeedback
                 style={this.props.style}
                 onPress={()=>this.onClick()}
                 underlayColor='transparent'
@@ -119,7 +119,7 @@ export default class CheckBox extends Component {
                     {this._renderRight()}
                     {this._renderSeperator()}
                 </View>
-            </TouchableHighlight>
+            </TouchableWithoutFeedback>
         );
     }
 }
